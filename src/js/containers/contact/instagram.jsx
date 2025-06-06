@@ -15,10 +15,11 @@ class Instagram extends Component {
             medias: [],
         };
         this.fetched = false;
+        this.timer = null;
 
     }
     componentDidMount() {
-        setTimeout(this.fetchData.bind(this), 50);
+        this.timer = setTimeout(this.fetchData.bind(this), 50);
     }
     render() {
         return (
@@ -36,7 +37,10 @@ class Instagram extends Component {
                 .then((response) => response.json())
                 .then((data) => {
                     this.fetched = true;
-                    clearTimeout();
+                    if (this.timer) {
+                        clearTimeout(this.timer);
+                        this.timer = null;
+                    }
                     this.setState({
                         bio: data.data.bio,
                         full_name: data.data.full_name,
@@ -49,7 +53,6 @@ class Instagram extends Component {
             fetchJsonp(media)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data);
                     let medias = [];
                     let source;
                     let internel_text;
@@ -72,10 +75,11 @@ class Instagram extends Component {
                     this.setState({ medias: medias });
 
                 })
-                .catch((error) => console.log(error));
+                .catch((error) => console.error(error));
 
         }
     }
 }
 
 export default Instagram;
+

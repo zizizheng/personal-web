@@ -14,7 +14,7 @@ import virus from '../../../assets/images/icons/virus.png';
 export default class Skill extends React.Component {
 
     componentDidMount() {
-        console.log(this.refs);
+        // Initialization hooks can go here if needed
     }
 
     render() {

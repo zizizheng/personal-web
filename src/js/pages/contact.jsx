@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
                         <h3 className="page-title text-center">
                             歡迎點開下方的圖示與我取得聯繫
                         </h3>
-                        <container className="topspace">
+                        <div className="topspace">
                             <a href="https://m.me/zizi.zheng.1" target="_blank" rel="noopener noreferrer">
                                 <img id="fbImg" className="animated pulse"
                                     src={fbImage} alt="fb icon"
@@ -77,7 +77,7 @@ export default class Contact extends React.Component {
                             <a href="https://leetcode.com/zizizheng/" target="_blank" rel="noopener noreferrer">
                                 <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" onMouseOver={() => this.onHover('leet')} />
                             </a>
-                        </container>
+                        </div>
 
                         <div className="message">
                             <span className="lead">{this.state.message}</span>
@@ -120,3 +120,4 @@ export default class Contact extends React.Component {
     // </h3>);
 
 }
+
