@@ -17,7 +17,7 @@ class Nav extends React.Component {
         this.navOffset = this.navbar.getBoundingClientRect().top;
     }
 
-    componentWillUpdate() {
+    componentDidUpdate() {
         this.navOffset = this.props.navOffset;
     }
 
@@ -73,3 +73,4 @@ const mapStateToProps = (state) => {
     }
 }
 export default connect(mapStateToProps)(Nav);
+

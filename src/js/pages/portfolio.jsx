@@ -46,7 +46,6 @@ export default class Portfolio extends React.Component {
     }
 
     changeContent(v, e) {
-        console.log(v);
         if (e) e.preventDefault(e);
         if (v === this.state.curSelect) return;
         else {
@@ -66,3 +65,4 @@ export default class Portfolio extends React.Component {
     }
 
 }
+
