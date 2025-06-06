@@ -7,7 +7,7 @@ export default class Portfolio extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            curContent: <Foodhub class="animated fadeIn" />,
+            curContent: <Foodhub className="animated fadeIn" />,
             curSelect: 'foodhub'
         };
     }
@@ -53,10 +53,10 @@ export default class Portfolio extends React.Component {
             this.setState({ curSelect: v });
             switch (v) {
                 case 'foodhub':
-                    this.setState({ curContent: <Foodhub class="animated fadeIn" /> });
+                    this.setState({ curContent: <Foodhub className="animated fadeIn" /> });
                     break;
                 case 'dissertion':
-                    this.setState({ curContent: <Dissert class="animated fadeIn" /> });
+                    this.setState({ curContent: <Dissert className="animated fadeIn" /> });
                     break;
                 default:
                     this.curContent = (<h3>Nothing remains</h3>);

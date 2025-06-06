@@ -12,9 +12,9 @@ class Intro extends React.Component {
                     <p className="lead text-muted text-center">
                         哈囉，這是我的個人網站<br />
                         關於我的一切請到
-                        <Link to="/about" onClick={() => this.changePage('about')}> About</Link> 探個究竟，其中包含我的專業技能以及個人經歷<br />
-                        <Link to="/portfolio" onClick={() => this.changePage('portfolio')}>Portfolio</Link> 有我近期所開發的作品介紹以及碩士論文<br />
-                        <Link to="/contact" onClick={() => this.changePage('contact')}>Contact</Link> 提供你聯絡我的方式以及其他平台的資訊<br />
+                        <Link to="/about" onClick={() => this.changePage(navAction('about'))}> About</Link> 探個究竟，其中包含我的專業技能以及個人經歷<br />
+                        <Link to="/portfolio" onClick={() => this.changePage(navAction('portfolio'))}>Portfolio</Link> 有我近期所開發的作品介紹以及碩士論文<br />
+                        <Link to="/contact" onClick={() => this.changePage(navAction('contact'))}>Contact</Link> 提供你聯絡我的方式以及其他平台的資訊<br />
                     </p>
                     <p className="lead text-center"><strong>Hope You Enjoy!</strong></p>
                 </div>

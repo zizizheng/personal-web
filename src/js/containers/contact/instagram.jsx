@@ -36,7 +36,7 @@ class Instagram extends Component {
                 .then((response) => response.json())
                 .then((data) => {
                     this.fetched = true;
-                    clearTimeout();
+
                     this.setState({
                         bio: data.data.bio,
                         full_name: data.data.full_name,
